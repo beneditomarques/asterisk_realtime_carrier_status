@@ -1,0 +1,1 @@
+ALTER TABLE ps_endpoints ADD COLUMN peer_status VARCHAR;

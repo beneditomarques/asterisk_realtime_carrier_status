@@ -77,7 +77,7 @@ def callback(manager, message):
     dict_message_event = json.loads(data)        
     peer_name = dict_message_event['Peer'].split('/')[1]
     log(f"Operadora: {peer_name} - Status: {dict_message_event['PeerStatus']}")
-    db.update_column_value(table_name="ps_endpoints", column_name="operadora_status", new_value=dict_message_event['PeerStatus'], condition_column="id", condition_value=peer_name)
+    db.update_column_value(table_name="ps_endpoints", column_name="peer_status", new_value=dict_message_event['PeerStatus'], condition_column="id", condition_value=peer_name)
 
 
 def main():

@@ -8,3 +8,4 @@ services:
     restart: always
     volumes:
       - ./app/:/app
+    network_mode: host
