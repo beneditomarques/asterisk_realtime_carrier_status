@@ -1,0 +1,10 @@
+version: '3.8'
+
+services:
+  asterisk_realtime_carrier_status:
+    container_name: asterisk_realtime_carrier_status
+    build: .
+    env_file: .env
+    restart: always
+    volumes:
+      - ./app/:/app
